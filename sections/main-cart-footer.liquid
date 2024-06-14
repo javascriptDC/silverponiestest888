@@ -89,6 +89,16 @@
                 >
                   {{ 'sections.cart.checkout' | t }}
                 </button>
+                {% if cart != empty %}
+                  <button
+                    type="button"
+                    id="clear-cart-button"
+                    class="cart__checkout-button button"
+                    name="clear-cart"
+                  >
+                    Clear
+                  </button>
+                {% endif %}
               </div>
 
               {%- if additional_checkout_buttons -%}
