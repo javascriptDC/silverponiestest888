@@ -106,7 +106,9 @@
                     product: product,
                     use_variant: true,
                     show_badges: true,
-                    price_class: 'price--large'
+                    price_class: 'price--large',
+                    regular_color: block.settings.regular_color,
+                    sale_color: block.settings.sale_color
                   -%}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
@@ -794,7 +796,19 @@
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color",
+          "id": "regular_color",
+          "label": "Regular Color"
+        },
+        {
+          "type": "color",
+          "id": "sale_color",
+          "label": "Sale Color"
+        }
+      ]
     },
     {
       "type": "sku",
