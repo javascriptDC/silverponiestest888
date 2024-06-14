@@ -156,12 +156,11 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
+                  style=" border: {{section.settings.border_width}}px solid {{section.settings.border_color}}; padding: 0 10px;"
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: {{ forloop.index }}; border: {{section.settings.border_width}}px solid {{section.settings.border_color}}; "
-                  {% else %}
-                    style=" border: {{section.settings.border_width}}px solid {{section.settings.border_color}}; "
+                    style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
                   {% render 'card-product',
