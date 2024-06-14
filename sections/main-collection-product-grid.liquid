@@ -159,7 +159,9 @@
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: {{ forloop.index }};"
+                    style="--animation-order: {{ forloop.index }}; border: {{section.settings.border_width}}px solid {{section.settings.border_color}}; "
+                  {% else %}
+                    style=" border: {{section.settings.border_width}}px solid {{section.settings.border_color}}; "
                   {% endif %}
                 >
                   {% render 'card-product',
@@ -324,6 +326,21 @@
           "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
         }
       ]
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 0,
+      "label": "Border Width"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "default": "#000000",
+      "label": "Border Color"
     },
     {
       "type": "header",
