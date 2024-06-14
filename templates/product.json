@@ -46,6 +46,12 @@
           "settings": {
           }
         },
+        "extra_info_8Dp7LM": {
+          "type": "extra_info",
+          "settings": {
+            "extra_info": "<p>This is test for product extra info<\/p>"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -61,6 +67,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "extra_info_8Dp7LM",
         "share"
       ],
       "settings": {
