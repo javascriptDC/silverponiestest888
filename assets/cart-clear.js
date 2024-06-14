@@ -22,9 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var cart__wrapper = document.querySelector('#cart__wrapper');
             cart__wrapper.classList.add('is-empty');
 
-            var js_contents = document.querySelector('.js-contents');
-            js_contents.innerHTML = "";
-            
+            var main_cart_footer = document.querySelector('#main-cart-footer');
+            main_cart_footer.classList.add('is-empty');
+            // After clearing the carts, you should reload the page.
+            location.reload();
         })
         .catch(error => {
             // Handle error
