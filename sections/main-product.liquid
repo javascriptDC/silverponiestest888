@@ -192,6 +192,10 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
+              {%- when 'extra_info' -%}
+                <div class="product__rich_text rte quick-add-hidden" {{ block.shopify_attributes }}>
+                  {{block.settings.extra_info}}
+                </div>
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -954,6 +958,18 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "extra_info",
+      "name": "t:sections.main-product.blocks.extra_info.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "extra_info",
+          "label": "Extra Information"
+        }
+      ]
     },
     {
       "type": "share",
